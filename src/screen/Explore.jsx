@@ -1,0 +1,52 @@
+import React from 'react';
+import { ScrollView, Text, View, Image, TextInput } from 'react-native';
+import { SearchBar } from 'react-native-elements';
+import { useState } from 'react';
+import Search from "react-native-vector-icons/AntDesign"
+import CardView from 'react-native-cardview';
+
+
+const Explore = () => {
+    const [state, setState] = useState("");
+    console.log(state);
+    return (
+        <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
+            <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
+                <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
+                    <View>
+                        <View>
+                            <Text style={{ fontSize: 32, fontWeight: "600", color: "#364356" }}>
+                                Good evening!
+                            </Text>
+                        </View>
+                        <View>
+                            <Text style={{ fontSize: 20, fontWeight: "600", color: "#636D77" }}>
+                                Hardline Scott
+                            </Text>
+                        </View>
+                    </View>
+                    <View style={{}}>
+                        <Image source={require("../assets/images/Rectangle32.png")} style={{ height: 68, width: 68 }} />
+                    </View>
+                </View>
+                <CardView cardElevation={15}
+                    cardMaxElevation={15}
+                    cornerRadius={12} style={{ width: "80%" }}>
+                    <View style={{ paddingHorizontal: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white" }}>
+                        <TextInput
+                            placeholder='Search your teacher'
+                            style={{ fontSize: 15, fontWeight: "600", color: "#636D77", width: "auto" }}
+
+                        />
+                        <Search name='search1' size={20} style={{ backgroundColor: "#5667FD", color: "white", padding: 8, borderRadius: 10 }} />
+                    </View>
+                </CardView>
+                <View>
+                    <Text>Hiii</Text>
+                </View>
+            </View >
+        </ScrollView >
+    )
+
+}
+export default Explore;
