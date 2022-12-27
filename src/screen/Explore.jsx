@@ -4,11 +4,14 @@ import { SearchBar } from 'react-native-elements';
 import { useState } from 'react';
 import Search from "react-native-vector-icons/AntDesign"
 import CardView from 'react-native-cardview';
+import Bar from "react-native-vector-icons/Foundation"
+
+// Components
+import PropularTeachers from "./PropularTeachers"
 
 
 const Explore = () => {
-    const [state, setState] = useState("");
-    console.log(state);
+
     return (
         <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
             <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
@@ -29,20 +32,25 @@ const Explore = () => {
                         <Image source={require("../assets/images/Rectangle32.png")} style={{ height: 68, width: 68 }} />
                     </View>
                 </View>
-                <CardView cardElevation={15}
-                    cardMaxElevation={15}
-                    cornerRadius={12} style={{ width: "80%" }}>
-                    <View style={{ paddingHorizontal: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white" }}>
-                        <TextInput
-                            placeholder='Search your teacher'
-                            style={{ fontSize: 15, fontWeight: "600", color: "#636D77", width: "auto" }}
+                <View style={{ marginTop: 30, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                    <CardView cardElevation={15}
+                        cardMaxElevation={15}
+                        cornerRadius={12} style={{ width: "78%" }}>
+                        <View style={{ paddingHorizontal: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white" }}>
+                            <TextInput
+                                placeholder='Search your teacher'
+                                style={{ fontSize: 15, fontWeight: "600", color: "#636D77", width: "80%" }}
 
-                        />
-                        <Search name='search1' size={20} style={{ backgroundColor: "#5667FD", color: "white", padding: 8, borderRadius: 10 }} />
+                            />
+                            <Search name='search1' size={20} style={{ backgroundColor: "#5667FD", color: "white", padding: 8, borderRadius: 10 }} />
+                        </View>
+                    </CardView>
+                    <View>
+                        <Bar name='graph-bar' size={30} color="black" />
                     </View>
-                </CardView>
+                </View>
                 <View>
-                    <Text>Hiii</Text>
+                    <PropularTeachers />
                 </View>
             </View >
         </ScrollView >
