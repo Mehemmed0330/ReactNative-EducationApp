@@ -8,6 +8,7 @@ import Bar from "react-native-vector-icons/Foundation"
 
 // Components
 import PropularTeachers from "./PropularTeachers"
+import PropularInstitution from './PropularInstitution';
 
 
 const Explore = () => {
@@ -51,6 +52,9 @@ const Explore = () => {
                 </View>
                 <View>
                     <PropularTeachers />
+                </View>
+                <View>
+                    <PropularInstitution />
                 </View>
             </View >
         </ScrollView >

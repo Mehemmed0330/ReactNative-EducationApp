@@ -55,7 +55,7 @@ export default function PropularTeachers() {
                 >
                     {data.map((item) => {
                         return (
-                            <View style={{ width: SIZE, height: 176, backgroundColor: "white", padding: 8, borderRadius: 12, marginRight: 16 }}>
+                            <View key={item.id} style={{ width: SIZE, height: 176, backgroundColor: "white", padding: 8, borderRadius: 12, marginRight: 16 }}>
                                 <View style={{ backgroundColor: `${item.backgroundColor}`, borderRadius: 10 }}>
                                     <Image source={item.image} />
                                 </View>
