@@ -1,35 +1,80 @@
-import * as React from 'react';
-import { Dimensions, Text, View } from 'react-native';
-import Carousel from 'react-native-reanimated-carousel';
+import React from 'react'
+import { ScrollView, View, Text, Image, useWindowDimensions } from 'react-native'
+import Filter from "react-native-vector-icons/Fontisto"
 
-function Index() {
-    const width = Dimensions.get('window').width;
+export default function PropularTeachers() {
+    const { width } = useWindowDimensions()
+    const SIZE = width * 0.3
+    const data = [
+        {
+            id: 1,
+            name: "Cassie Valdez",
+            subject: "Biology",
+            image: require("../assets/images/Rectangle18.png"),
+            backgroundColor: "rgb(207,104,125)"
+
+        },
+        {
+            id: 2,
+            name: "Paul Simons",
+            subject: "Chemistry",
+            image: require("../assets/images/Rectangle2.png"),
+            backgroundColor: "rgb(109,100,100)"
+
+        },
+        {
+            id: 3,
+            name: "Graham Osbor",
+            subject: "Physics",
+            image: require("../assets/images/Rectangle3.png"),
+            backgroundColor: "rgb(231,231,231)"
+
+
+        }
+
+    ]
+
     return (
-        <View style={{ flex: 1 }}>
-            <Carousel
-                loop
-                width={width}
-                height={width / 2}
-                autoPlay={true}
-                data={[...new Array(6).keys()]}
-                scrollAnimationDuration={1000}
-                onSnapToItem={(index) => console.log('current index:', index)}
-                renderItem={({ index }) => (
-                    <View
-                        style={{
-                            flex: 1,
-                            borderWidth: 1,
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <Text style={{ textAlign: 'center', fontSize: 30 }}>
-                            {`${index}`}
-                        </Text>
-                    </View>
-                )}
-            />
-        </View>
-    );
-}
+        <ScrollView>
+            <View style={{ marginTop: 30 }}>
+                <View style={{ display: "flex", justifyContent: "space-between", flexDirection: "row" }}>
+                    <Text style={{ fontSize: 20, fontWeight: "600", color: "#364356" }}>
+                        Propular Teacher
+                    </Text>
+                    <Filter name='filter' size={25} />
+                </View>
 
-export default Index;
+
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    bounces={false}
+                    scrollEventThrottle={16}
+                    decelerationRate="fast"
+                    style={{ marginTop: 30 }}
+                >
+                    {data.map((item) => {
+                        return (
+                            <View style={{ width: SIZE, height: 176, backgroundColor: "white", padding: 8, borderRadius: 12, marginRight: 16 }}>
+                                <View style={{ backgroundColor: `${item.backgroundColor}`, borderRadius: 10 }}>
+                                    <Image source={item.image} />
+                                </View>
+                                <View style={{ marginTop: 8 }}>
+                                    <Text style={{ fontSize: 15, fontWeight: "600", lineHeight: 21, color: "#364356" }}>
+                                        {item.name}
+                                    </Text>
+                                    <Text style={{ fontSize: 12, fontWeight: "400", lineHeight: 14 }}>
+                                        {item.subject}
+                                    </Text>
+                                </View>
+                            </View>
+                        );
+                    })}
+
+
+                </ScrollView>
+
+            </View>
+        </ScrollView>
+    )
+}
