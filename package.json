@@ -26,6 +26,7 @@
     "react-native-screens": "^3.18.2",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vector-icons": "^9.2.0",
+    "react-show-more-text": "^1.6.2",
     "uninstall": "^0.0.0"
   },
   "devDependencies": {
