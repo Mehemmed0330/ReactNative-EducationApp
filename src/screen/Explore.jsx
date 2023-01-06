@@ -5,11 +5,16 @@ import { useState } from 'react';
 import Search from "react-native-vector-icons/AntDesign"
 import CardView from 'react-native-cardview';
 import Bar from "react-native-vector-icons/Foundation"
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 // Components
 import PropularTeachers from "./PropularTeachers"
 import PropularInstitution from './PropularInstitution';
+import Welcome from './Welcome';
 
+const Tab = createBottomTabNavigator();
 
 const Explore = () => {
 
@@ -57,8 +62,15 @@ const Explore = () => {
                     <PropularInstitution />
                 </View>
             </View >
+
         </ScrollView >
+
     )
 
+}
+const ExploreBar = () => {
+    <Tab.Navigator>
+        <Tab.Screen name="Home" component={Welcome} />
+    </Tab.Navigator>
 }
 export default Explore;
