@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Search from "react-native-vector-icons/AntDesign"
 import CardView from 'react-native-cardview';
 import Bar from "react-native-vector-icons/Foundation"
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -13,64 +12,66 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PropularTeachers from "./PropularTeachers"
 import PropularInstitution from './PropularInstitution';
 import Welcome from './Welcome';
-
 const Tab = createBottomTabNavigator();
+
 
 const Explore = () => {
 
     return (
-        <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
-            <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
-                <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
-                    <View>
+        <View>
+            <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
+                <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
+                    <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
                         <View>
-                            <Text style={{ fontSize: 32, fontWeight: "600", color: "#364356" }}>
-                                Good evening!
-                            </Text>
+                            <View>
+                                <Text style={{ fontSize: 32, fontWeight: "600", color: "#364356" }}>
+                                    Good evening!
+                                </Text>
+                            </View>
+                            <View>
+                                <Text style={{ fontSize: 20, fontWeight: "600", color: "#636D77" }}>
+                                    Hardline Scott
+                                </Text>
+                            </View>
                         </View>
+                        <View style={{}}>
+                            <Image source={require("../assets/images/Rectangle32.png")} style={{ height: 68, width: 68 }} />
+                        </View>
+                    </View>
+                    <View style={{ marginTop: 30, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                        <CardView cardElevation={15}
+                            cardMaxElevation={15}
+                            cornerRadius={12} style={{ width: "78%" }}>
+                            <View style={{ paddingHorizontal: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white" }}>
+                                <TextInput
+                                    placeholder='Search your teacher'
+                                    style={{ fontSize: 15, fontWeight: "600", color: "#636D77", width: "80%" }}
+
+                                />
+                                <Search name='search1' size={20} style={{ backgroundColor: "#5667FD", color: "white", padding: 8, borderRadius: 10 }} />
+                            </View>
+                        </CardView>
                         <View>
-                            <Text style={{ fontSize: 20, fontWeight: "600", color: "#636D77" }}>
-                                Hardline Scott
-                            </Text>
+                            <Bar name='graph-bar' size={30} color="black" />
                         </View>
                     </View>
-                    <View style={{}}>
-                        <Image source={require("../assets/images/Rectangle32.png")} style={{ height: 68, width: 68 }} />
-                    </View>
-                </View>
-                <View style={{ marginTop: 30, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-                    <CardView cardElevation={15}
-                        cardMaxElevation={15}
-                        cornerRadius={12} style={{ width: "78%" }}>
-                        <View style={{ paddingHorizontal: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white" }}>
-                            <TextInput
-                                placeholder='Search your teacher'
-                                style={{ fontSize: 15, fontWeight: "600", color: "#636D77", width: "80%" }}
-
-                            />
-                            <Search name='search1' size={20} style={{ backgroundColor: "#5667FD", color: "white", padding: 8, borderRadius: 10 }} />
-                        </View>
-                    </CardView>
                     <View>
-                        <Bar name='graph-bar' size={30} color="black" />
+                        <PropularTeachers />
                     </View>
-                </View>
-                <View>
-                    <PropularTeachers />
-                </View>
-                <View>
-                    <PropularInstitution />
-                </View>
-            </View >
+                    <View>
+                        <PropularInstitution />
+                    </View>
+                </View >
+                <Tab.Navigator>
+                    <Tab.Screen name="Home" component={Welcome} />
+                </Tab.Navigator>
+            </ScrollView >
 
-        </ScrollView >
+        </View>
+
 
     )
 
 }
-const ExploreBar = () => {
-    <Tab.Navigator>
-        <Tab.Screen name="Home" component={Welcome} />
-    </Tab.Navigator>
-}
+
 export default Explore;
