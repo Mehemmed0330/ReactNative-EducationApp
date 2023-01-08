@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator();
 const Explore = () => {
 
     return (
-        <View>
+        <>
             <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
                 <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
                     <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
@@ -63,11 +63,15 @@ const Explore = () => {
                     </View>
                 </View >
                 <Tab.Navigator>
-                    <Tab.Screen name="Home" component={Welcome} />
+                    <Tab.Screen name="Home" component={Welcome} options={{ headerShown: false }} />
                 </Tab.Navigator>
             </ScrollView >
-
-        </View>
+            <View>
+                {/* <Tab.Navigator>
+                    <Tab.Screen name="Home" component={Welcome} options={{ headerShown: false }} />
+                </Tab.Navigator> */}
+            </View>
+        </>
 
 
     )
