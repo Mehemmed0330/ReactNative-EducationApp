@@ -20,10 +20,9 @@ function SignIn({ navigation }) {
                 <View style={{ marginTop: 33, flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <Text style={{ fontSize: 18 }}>
                         Don’t have account?
-
                     </Text>
                     <View style={{ marginLeft: 5 }}>
-                        <Text onPress={() => navigation.push("SignUp")} style={{ color: "#5667FD", fontSize: 18 }}>
+                        <Text onPress={() => navigation.navigate("SignUp")} style={{ color: "#5667FD", fontSize: 18 }}>
                             SignUp
                         </Text>
                     </View>

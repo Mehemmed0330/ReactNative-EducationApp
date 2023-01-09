@@ -1,9 +1,12 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import TabNavigation from "./src/navigation/TabNavigation"
+import { useRoute } from '@react-navigation/native';
+import { NavigationState } from '@react-navigation/native';
 
 // Screens
 import Welcome from "./src/screen/Welcome"
@@ -17,12 +20,14 @@ const Tab = createBottomTabNavigator();
 
 
 const Stack = createNativeStackNavigator();
+// const route = useRoute()
 
 function App() {
+
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator >
+        {/* <Stack.Navigator >
           <Stack.Screen name="Welcome" component={Welcome} options={{
             headerShown: false,
             title: "",
@@ -84,7 +89,9 @@ function App() {
             animation: 'slide_from_right',
 
           }} />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
+        {/* {navigation.navigate === "SignUp" ? <TabNavigation /> : null} */}
+        <TabNavigation />
 
 
       </NavigationContainer>

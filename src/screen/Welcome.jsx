@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, Image, ScrollView, Button, Pressable } from 'react-native';
 
 const Welcome = ({ navigation }) => {
+    // console.log(navigation.state.routeName)
     return (
         <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
             <View >
@@ -21,10 +22,10 @@ const Welcome = ({ navigation }) => {
                     </Text>
                 </View>
                 <View style={{ marginLeft: "auto", marginRight: "auto", width: "60%", marginTop: 100 }}>
-                    <Pressable style={styles.button} onPress={() => navigation.push("SignUp")}>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate("Sign Up")}>
                         <Text style={styles.text}>Sign up</Text>
                     </Pressable>
-                    <Pressable style={styles.skip} onPress={() => navigation.push("SignIn")}>
+                    <Pressable style={styles.skip} onPress={() => navigation.navigate("SignIn")}>
                         <Text style={styles.skipText}>Skip</Text>
                     </Pressable>
                 </View>
