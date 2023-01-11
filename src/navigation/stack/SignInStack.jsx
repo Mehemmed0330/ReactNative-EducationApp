@@ -1,23 +1,20 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import SignUp from "../../screen/SignUp"
+import SignIn from '../../screen/SignIn'
 
 const Stack = createNativeStackNavigator()
 
-export default function SignUpStack() {
+export default function SignInStack() {
     return (
-
         <Stack.Navigator>
             <Stack.Screen
+                name='SignIn'
+                component={SignIn}
                 options={{
-                    headerShown: false,
-                    animation: "slide_from_left"
+                    animation: "fade_from_bottom",
+                    headerShown: false
                 }}
-                name='SignUp'
-                component={SignUp}
             />
         </Stack.Navigator>
-
-
     )
 }
