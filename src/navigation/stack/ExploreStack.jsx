@@ -1,20 +1,17 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Selection from '../../screen/Selection'
-
+import Explore from '../../screen/Explore'
 const Stack = createNativeStackNavigator()
-
-export default function SelectionStack() {
+export default function ExploreStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name='selection'
-                component={Selection}
+                name="Explore"
+                component={Explore}
                 options={{
-                    headerShown: false
+                    headerShown: false,
                 }}
             />
         </Stack.Navigator>
-
     )
 }

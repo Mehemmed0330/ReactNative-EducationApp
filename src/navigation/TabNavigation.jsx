@@ -4,6 +4,8 @@ import WelcomeStack from './stack/WelcomeStack'
 import SignUpStack from './stack/SignUpStack'
 import SignInStack from './stack/SignInStack'
 import SelectionStack from './stack/SelectionStack'
+import ProvinceStack from './stack/ProvinceStack'
+import ExploreStack from './stack/ExploreStack'
 
 const Tab = createBottomTabNavigator()
 
@@ -42,6 +44,25 @@ export default function index() {
                 <Tab.Screen
                     name='Selection'
                     component={SelectionStack}
+                    options={{
+                        tabBarStyle: { display: "none" },
+                    }}
+                />
+                <Tab.Screen
+                    name="province"
+                    component={ProvinceStack}
+                    options={{
+                        tabBarStyle: { display: "none" },
+                        tabBarShowLabel: false,
+
+                    }}
+                />
+                <Tab.Screen
+                    name='explore'
+                    component={ExploreStack}
+                    options={{
+                        // tabBarShowLabel: false,
+                    }}
                 />
 
             </Tab.Navigator>

@@ -62,9 +62,9 @@ const Explore = () => {
                         <PropularInstitution />
                     </View>
                 </View >
-                <Tab.Navigator>
+                {/* <Tab.Navigator>
                     <Tab.Screen name="Home" component={Welcome} options={{ headerShown: false }} />
-                </Tab.Navigator>
+                </Tab.Navigator> */}
             </ScrollView >
             <View>
                 {/* <Tab.Navigator>

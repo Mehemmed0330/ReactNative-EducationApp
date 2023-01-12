@@ -172,10 +172,10 @@ const Selection = ({ navigation }) => {
                         />
                     ))}
                     <View style={{ backgroundColor: "rgb(244,245,249)", marginLeft: "auto", marginRight: "auto", marginTop: 80, width: "80%" }}>
-                        <Pressable style={styles.button} onPress={() => navigation.push("Province")}>
+                        <Pressable style={styles.button} onPress={() => navigation.navigate("province")}>
                             <Text style={styles.text}>Next</Text>
                         </Pressable>
-                        <Pressable style={styles.skip} onPress={() => navigation.push("Province")}>
+                        <Pressable style={styles.skip} onPress={() => navigation.navigate("province")}>
                             <Text style={styles.skipText}>Skip</Text>
                         </Pressable>
                     </View>
