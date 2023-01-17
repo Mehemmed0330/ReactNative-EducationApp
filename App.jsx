@@ -7,13 +7,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabNavigation from "./src/navigation/TabNavigation"
 
 
-// Screens
 
 const Tab = createBottomTabNavigator();
 
 
 const Stack = createNativeStackNavigator();
-// const route = useRoute()
 
 function App() {
 
