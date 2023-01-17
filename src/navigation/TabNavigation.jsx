@@ -14,10 +14,19 @@ export default function index() {
     return (
         <>
             <Tab.Navigator
-                screenOptions={{
-                    headerShown: false,
+                // screenOptions={{
+                //     headerShown: false,
 
-                }}
+                // }}
+
+                screenOptions={({ route }) => ({
+                    headerShown: false,
+                    tabBarButton: ["Welcome", "Sign up", "Sign in", "Selection", "province"].includes(route.name)
+                        ? () => {
+                            return null;
+                        }
+                        : undefined
+                })}
 
             >
                 <Tab.Screen
@@ -62,16 +71,16 @@ export default function index() {
                 <Tab.Screen
                     name='explore'
                     component={ExploreStack}
-                    // options={{
-                    //     tabBarShowLabel: false,
-                    // }}
-                    options={({ route }) => ({
-                        tabBarShowLabel: ({ }) => {
-                            if (route.name === "explore") {
-                                return console.log("explore")
-                            }
-                        }
-                    })}
+                // options={{
+                //     tabBarShowLabel: false,
+                // }}
+                // options={({ route }) => ({
+                //     tabBarShowLabel: ({ }) => {
+                //         if (route.name === "explore") {
+                //             return console.log("explore")
+                //         }
+                //     }
+                // })}
                 />
 
             </Tab.Navigator>
