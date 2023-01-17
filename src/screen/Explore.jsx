@@ -1,18 +1,13 @@
 import React from 'react';
 import { ScrollView, Text, View, Image, TextInput } from 'react-native';
-import { SearchBar } from 'react-native-elements';
-import { useState } from 'react';
 import Search from "react-native-vector-icons/AntDesign"
 import CardView from 'react-native-cardview';
 import Bar from "react-native-vector-icons/Foundation"
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 // Components
 import PropularTeachers from "../components/PropularTeachers"
 import PropularInstitution from '../components/PropularInstitution';
-import Welcome from './Welcome';
-const Tab = createBottomTabNavigator();
 
 
 const Explore = () => {
@@ -62,14 +57,8 @@ const Explore = () => {
                         <PropularInstitution />
                     </View>
                 </View >
-                {/* <Tab.Navigator>
-                    <Tab.Screen name="Home" component={Welcome} options={{ headerShown: false }} />
-                </Tab.Navigator> */}
             </ScrollView >
             <View>
-                {/* <Tab.Navigator>
-                    <Tab.Screen name="Home" component={Welcome} options={{ headerShown: false }} />
-                </Tab.Navigator> */}
             </View>
         </>
 
