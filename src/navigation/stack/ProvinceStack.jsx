@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Province from '../../screen/Province'
+import Province from '../../components/Province'
 
 const Stack = createNativeStackNavigator()
 export default function ProvinceStack() {

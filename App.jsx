@@ -5,16 +5,9 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabNavigation from "./src/navigation/TabNavigation"
-import { useRoute } from '@react-navigation/native';
-import { NavigationState } from '@react-navigation/native';
+
 
 // Screens
-import Welcome from "./src/screen/Welcome"
-import SignIn from "./src/screen/SignIn"
-import SignUp from "./src/screen/SignUp"
-import Selection from "./src/screen/Selection"
-import Province from "./src/screen/Province"
-import Explore from './src/screen/Explore';
 
 const Tab = createBottomTabNavigator();
 

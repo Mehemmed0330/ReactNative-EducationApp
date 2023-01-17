@@ -9,8 +9,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 // Components
-import PropularTeachers from "./PropularTeachers"
-import PropularInstitution from './PropularInstitution';
+import PropularTeachers from "../components/PropularTeachers"
+import PropularInstitution from '../components/PropularInstitution';
 import Welcome from './Welcome';
 const Tab = createBottomTabNavigator();
 

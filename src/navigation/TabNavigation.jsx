@@ -71,6 +71,9 @@ export default function index() {
                 <Tab.Screen
                     name='explore'
                     component={ExploreStack}
+                    options={{
+                        title: "Explore"
+                    }}
                 // options={{
                 //     tabBarShowLabel: false,
                 // }}
