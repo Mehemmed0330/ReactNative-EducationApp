@@ -18,12 +18,14 @@ export default function index() {
                     headerShown: false,
 
                 }}
+
             >
                 <Tab.Screen
                     name="Welcome"
                     component={WelcomeStack}
                     options={{
                         tabBarStyle: { display: "none" },
+
                     }
                     }
                 />
@@ -53,16 +55,23 @@ export default function index() {
                     component={ProvinceStack}
                     options={{
                         tabBarStyle: { display: "none" },
-                        tabBarShowLabel: false,
+
 
                     }}
                 />
                 <Tab.Screen
                     name='explore'
                     component={ExploreStack}
-                    options={{
-                        // tabBarShowLabel: false,
-                    }}
+                    // options={{
+                    //     tabBarShowLabel: false,
+                    // }}
+                    options={({ route }) => ({
+                        tabBarShowLabel: ({ }) => {
+                            if (route.name === "explore") {
+                                return console.log("explore")
+                            }
+                        }
+                    })}
                 />
 
             </Tab.Navigator>
