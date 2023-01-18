@@ -6,6 +6,8 @@ import SignInStack from './stack/SignInStack'
 import SelectionStack from './stack/SelectionStack'
 import ProvinceStack from './stack/ProvinceStack'
 import ExploreStack from './stack/ExploreStack'
+import StreamStack from './stack/StreamStack'
+import ClassWorkStack from "./stack/ClassWorkStack"
 
 const Tab = createBottomTabNavigator()
 
@@ -74,18 +76,19 @@ export default function index() {
                     options={{
                         title: "Explore"
                     }}
-                // options={{
-                //     tabBarShowLabel: false,
-                // }}
-                // options={({ route }) => ({
-                //     tabBarShowLabel: ({ }) => {
-                //         if (route.name === "explore") {
-                //             return console.log("explore")
-                //         }
-                //     }
-                // })}
                 />
-
+                <Tab.Screen
+                    name='stream'
+                    component={StreamStack}
+                    options={{
+                        title: "Stream"
+                    }} />
+                <Tab.Screen
+                    name='classWorkStack'
+                    component={ClassWorkStack}
+                    options={{
+                        title: "ClassWork"
+                    }} />
             </Tab.Navigator>
 
         </>
