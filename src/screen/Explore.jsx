@@ -3,7 +3,7 @@ import { ScrollView, Text, View, Image, TextInput } from 'react-native';
 import Search from "react-native-vector-icons/AntDesign"
 import CardView from 'react-native-cardview';
 import Bar from "react-native-vector-icons/Foundation"
-
+import DrawerBar from '../navigation/DrawerBar';
 
 // Components
 import PropularTeachers from "../components/PropularTeachers"
@@ -15,6 +15,8 @@ const Explore = () => {
     return (
         <>
             <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
+                {/* <DrawerBar /> */}
+
                 <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
                     <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
                         <View>

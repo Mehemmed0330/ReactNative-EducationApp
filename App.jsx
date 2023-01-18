@@ -2,8 +2,9 @@
 
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import TabNavigation from "./src/navigation/TabNavigation"
 
+import TabNavigation from "./src/navigation/TabNavigation"
+// import DrawerBar from './src/navigation/DrawerBar';
 
 
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <NavigationContainer>
         <TabNavigation />
+        {/* <DrawerBar /> */}
       </NavigationContainer>
 
     </>
