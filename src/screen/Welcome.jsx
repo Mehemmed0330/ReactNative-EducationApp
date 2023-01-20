@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, Image, ScrollView, Button, Pressable } from 're
 // import DrawerBar from '../navigation/DrawerBar';
 
 const Welcome = ({ navigation }) => {
-    // console.log(navigation.state.routeName)
     return (
         <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
             {/* <DrawerBar /> */}
