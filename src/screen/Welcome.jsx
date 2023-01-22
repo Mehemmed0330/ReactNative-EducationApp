@@ -1,11 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, ScrollView, Button, Pressable } from 'react-native';
-// import DrawerBar from '../navigation/DrawerBar';
 
 const Welcome = ({ navigation }) => {
     return (
         <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
-            {/* <DrawerBar /> */}
             <View >
                 <View style={{ display: "flex", justifyContent: "center", alignItems: "center", paddingVertical: 20, marginTop: 20 }}>
                     <Image
