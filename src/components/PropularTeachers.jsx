@@ -36,8 +36,8 @@ export default function PropularTeachers() {
 
     return (
         <ScrollView>
-            <View style={{ marginTop: 30 }}>
-                <View style={{ display: "flex", justifyContent: "space-between", flexDirection: "row" }}>
+            <View style={{ marginTop: 30, width: "100%" }}>
+                <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto", display: "flex", justifyContent: "space-between", flexDirection: "row" }}>
                     <Text style={{ fontSize: 20, fontWeight: "600", color: "#364356" }}>
                         Propular Teacher
                     </Text>
@@ -51,7 +51,10 @@ export default function PropularTeachers() {
                     bounces={false}
                     scrollEventThrottle={16}
                     decelerationRate="fast"
-                    style={{ marginTop: 30 }}
+                    style={{
+                        marginTop: 30,
+                        marginLeft: 30
+                    }}
                 >
                     {data.map((item) => {
                         return (

@@ -34,7 +34,7 @@ export default function PropularInstitution() {
 
     return (
         <ScrollView>
-            <View style={{ marginTop: 30 }}>
+            <View style={{ marginTop: 30, width: "85%", marginLeft: "auto", marginRight: "auto", }}>
                 <View style={{ display: "flex", justifyContent: "space-between", flexDirection: "row" }}>
                     <Text style={{ fontSize: 20, fontWeight: "600", color: "#364356" }}>
                         Propular Institution

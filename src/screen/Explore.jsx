@@ -17,8 +17,8 @@ const Explore = () => {
             <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
                 {/* <DrawerBar /> */}
 
-                <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}>
-                    <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
+                <View style={{}}>
+                    <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 20 }}>
                         <View>
                             <View>
                                 <Text style={{ fontSize: 32, fontWeight: "600", color: "#364356" }}>
@@ -35,7 +35,7 @@ const Explore = () => {
                             <Image source={require("../assets/images/Rectangle32.png")} style={{ height: 68, width: 68 }} />
                         </View>
                     </View>
-                    <View style={{ marginTop: 30, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                    <View style={{ width: "85%", marginLeft: "auto", marginRight: "auto", marginTop: 30, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                         <CardView cardElevation={15}
                             cardMaxElevation={15}
                             cornerRadius={12} style={{ width: "78%" }}>
