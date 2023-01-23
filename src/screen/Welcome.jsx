@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, ScrollView, Button, Pressable } from 'react-native';
-
 const Welcome = ({ navigation }) => {
     return (
         <ScrollView style={{ backgroundColor: "rgb(244,245,249)" }}>
@@ -21,7 +20,7 @@ const Welcome = ({ navigation }) => {
                     </Text>
                 </View>
                 <View style={{ marginLeft: "auto", marginRight: "auto", width: "60%", marginTop: 100 }}>
-                    <Pressable style={styles.button} onPress={() => navigation.navigate("Sign up")}>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate("SignupDraw")}>
                         <Text Text style={styles.text}>Sign up</Text>
                     </Pressable>
                     <Pressable style={styles.skip} onPress={() => navigation.navigate("Sign in")}>

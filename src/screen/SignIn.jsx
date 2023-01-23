@@ -13,7 +13,7 @@ function SignIn({ navigation }) {
                 </View>
                 <NeForm />
                 <View style={{ marginLeft: "auto", marginRight: "auto", width: "60%", marginTop: 50 }}>
-                    <Pressable style={styles.button} onPress={() => navigation.push("Welcome")}>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate("ExploreDraw")}>
                         <Text style={styles.text}>Sign in</Text>
                     </Pressable>
                 </View>
@@ -22,7 +22,7 @@ function SignIn({ navigation }) {
                         Don’t have account?
                     </Text>
                     <View style={{ marginLeft: 5 }}>
-                        <Text onPress={() => navigation.navigate("SignUp")} style={{ color: "#5667FD", fontSize: 18 }}>
+                        <Text onPress={() => navigation.navigate("SignupDraw")} style={{ color: "#5667FD", fontSize: 18 }}>
                             SignUp
                         </Text>
                     </View>
