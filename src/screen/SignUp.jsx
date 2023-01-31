@@ -15,7 +15,7 @@ function DetailsScreen({ navigation }) {
                 <Nep />
 
                 <View style={{ marginLeft: "auto", marginRight: "auto", width: "60%", marginTop: 40 }}>
-                    <Pressable style={styles.button} onPress={() => navigation.navigate("SelectionDraw")}>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate("Selection")}>
                         <Text style={styles.text}>Sign up</Text>
                     </Pressable>
                 </View>
@@ -24,7 +24,7 @@ function DetailsScreen({ navigation }) {
                         Don’t have account?
                     </Text>
                     <View style={{ marginLeft: 5 }}>
-                        <Text onPress={() => navigation.navigate("SigninDraw")} style={{ color: "#5667FD", fontSize: 18 }}>
+                        <Text onPress={() => navigation.navigate("Sign in")} style={{ color: "#5667FD", fontSize: 18 }}>
                             SignIn
                         </Text>
                     </View>

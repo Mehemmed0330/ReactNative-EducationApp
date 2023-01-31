@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <NavigationContainer>
-        {/* <TabNavigation /> */}
-        <DrawerBar />
+        <TabNavigation />
+        {/* <DrawerBar /> */}
       </NavigationContainer>
 
     </>

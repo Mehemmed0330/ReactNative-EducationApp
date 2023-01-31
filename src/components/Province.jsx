@@ -83,10 +83,10 @@ const Province = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={{ backgroundColor: "rgb(244,245,249)", marginLeft: "auto", marginRight: "auto", paddingVertical: 100, width: "80%" }}>
-                    <Pressable style={styles.button} onPress={() => navigation.navigate("ExploreDraw")}>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate("explore")}>
                         <Text style={styles.text}>Next</Text>
                     </Pressable>
-                    <Pressable style={styles.skip} onPress={() => navigation.navigate("ExploreDraw")}>
+                    <Pressable style={styles.skip} onPress={() => navigation.navigate("explore")}>
                         <Text style={styles.skipText}>Skip</Text>
                     </Pressable>
                 </View>
